@@ -6,13 +6,14 @@
     "description": "Get meshcentral agents info in csv",
     "hasAdminPanel": false,
     "homepage": " https://github.com/freaky-hue/csv_inventory",
-    "changelogUrl": "",
-    "configUrl": "",
-    "downloadUrl": "",
+    "changelogUrl": "https://raw.githubusercontent.com/freaky-hue/csv_inventory/refs/heads/main/changelog.md",
+    "configUrl": "https://raw.githubusercontent.com/freaky-hue/csv_inventory/refs/heads/main/config.json",
+    "downloadUrl": "https://github.com/freaky-hue/csv_inventory/archive/refs/tags/master.zip",
     "repository": {
         "type": "git",
         "url": "https://github.com/freaky-hue/csv_inventory.git"
     },
     "versionHistoryUrl": "",
     "meshCentralCompat": ">=0.4.4-s"
+
 }
