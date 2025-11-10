@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<style>
+    /*.devices {
+        width: 100%;
+        overflow-y: auto;
+        height: 400px;
+        display: block;
+    }
+
+    .devices h1 {
+        font-size: 48px;
+    }
+
+    .devices h2 {
+        font-size: 32px;
+    }
+
+    .devices p {
+        font-size: 26px;
+    }
+
+    */
+
+    .submit_but_Div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .submit_but input[type="submit"] {
+        font-size: 20px;
+        padding: 20px;
+
+    }
+</style>
+
+<body>
+    <div class="devices">
+        <h1>Devices</h1>
+        {{#if devices}}
+        {{#each devices}}
+        <h2>{{this.name}}</h2>
+
+        <p><span style="font-weight: bold;">_id: </span>{{this._id}}</p>
+        <p><span style="font-weight: bold;">type:</span>{{this.type}}</p>
+        <p><span style="font-weight: bold;">mtype:</span>{{this.mtype}}</p>
+        <p><span style="font-weight: bold;">icon:</span>{{this.icon}}</p>
+        <p><span style="font-weight: bold;">meshid:</span>{{this.meshid}}</p>
+        <p><span style="font-weight: bold;">name:</span>{{this.name}}</p>
+        <p><span style="font-weight: bold;">rname:</span>{{this.rname}}</p>
+        <p><span style="font-weight: bold;">domain:</span>{{this.domain}}</p>
+        <p><span style="font-weight: bold;">agent_ver:</span>{{this.agent_ver}}</p>
+        <p><span style="font-weight: bold;">agent_id:</span>{{this.agent_id}}</p>
+        <p><span style="font-weight: bold;">agent_caps:</span>{{this.agent_caps}}</p>
+        <p><span style="font-weight: bold;">agent_core:</span>{{this.agent_core}}</p>
+        <p><span style="font-weight: bold;">agent_root:</span>{{this.agent_root}}</p>
+        <p><span style="font-weight: bold;">host:</span>{{this.host}}</p>
+        <p><span style="font-weight: bold;">osdesc:</span>{{this.osdesc}}</p>
+        <p><span style="font-weight: bold;">ip:</span>{{this.ip}}</p>
+        <p><span style="font-weight: bold;">av_product:</span>{{this.av_product}}</p>
+        <p><span style="font-weight: bold;">av_updated:</span>{{this.av_updated}}</p>
+        <p><span style="font-weight: bold;">av_enabled:</span>{{this.av_enabled}}</p>
+        <p><span style="font-weight: bold;">wsc_antivirus:</span>{{this.wsc_antivirus}}</p>
+        <p><span style="font-weight: bold;">wsc_autoupdate:</span>{{this.wsc_autoupdate}}</p>
+        <p><span style="font-weight: bold;">wsc_firewall:</span>{{this.wsc_firewall}}</p>
+        <p><span style="font-weight: bold;">users:</span>{{this.users}}</p>
+        <p><span style="font-weight: bold;">lusers:</span>{{this.lusers}}</p>
+        <p><span style="font-weight: bold;">lastbootuptime:</span>{{this.lastbootuptime}}</p>
+        <p><span style="font-weight: bold;">lastbootdate:</span>{{this.lastbootdate}}</p>
+        <p><span style="font-weight: bold;">defender_realtimeprotectio:</span>{{this.defender_realtimeprotectio}}</p>
+        <p><span style="font-weight: bold;">defender_tamperprotected:</span>{{this.defender_tamperprotected}}</p>
+        <p><span style="font-weight: bold;">intelamt_ver:</span>{{this.intelamt_ver}}</p>
+        <p><span style="font-weight: bold;">intelamt_sku:</span>{{this.intelamt_sku}}</p>
+        <p><span style="font-weight: bold;">intelamt_state:</span>{{this.intelamt_state}}</p>
+        <p><span style="font-weight: bold;">intelamt_flags:</span>{{this.intelamt_flags}}</p>
+        <p><span style="font-weight: bold;">intelamt_uuid:</span>{{this.intelamt_uuid}}</p>
+        {{/each}}
+        {{/if}}
+    </div>
+    
+
+    <div class="submit_but_Div" style="postion: fixed;">
+        <form id="Forms">
+
+            <input id="submit_but" type="submit" value="Download Info">
+        </form>
+
+
+    </div>
+
+</body>
+
+
+<script>
+
+
+
+    console.log(document.getElementById("Forms")); addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+
+
+        const response = await fetch("/plugin/csvinventory", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: true
+        })
+
+    })
+
+</script>
+
+</html>
