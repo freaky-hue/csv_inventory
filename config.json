@@ -1,6 +1,6 @@
 {
-    "name": "csv_inventory",
-    "shortName": "csv_inventory",
+    "name": "csvinventory",
+    "shortName": "csvinventory",
     "version": "0.0.0",
     "author": "",
     "description": "Get meshcentral agents info in csv",
@@ -17,3 +17,4 @@
     "meshCentralCompat": ">=0.4.4-s"
 
 }
+
